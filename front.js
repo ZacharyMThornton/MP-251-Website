@@ -31,8 +31,8 @@ window.addEventListener("resize", function() {
     canvas.height = window.innerHeight;
     canvas.width = window.innerWidth;
 
-    // linear gradient that is the canvas background
-    let gradient = ctx.createLinearGradient(100,50,canvas.width,canvas.height);
+    // resize gradient to fit screen
+    gradient = ctx.createLinearGradient(100,50,canvas.width,canvas.height);
     gradient.addColorStop(0, 'red');
     gradient.addColorStop(0.16, 'orange');
     gradient.addColorStop(2* 0.16, 'yellow');
