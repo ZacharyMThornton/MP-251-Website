@@ -92,25 +92,17 @@ function startContinuousEvent() {
         blockx = Math.floor(Mouse.x/pixelRes);
         blocky = Math.floor(Mouse.y/pixelRes);
 
-        // if (grid[blocky][blockx] == 0){
-        //     grid[blocky][blockx] = 1;
-        // }
+    // sand placing logic (work in progress)
         for (let i = 0; i < 10; i++){
             if(blockx - i > 0 && blocky - i > 0){
                 if(blockx + i < grid[0].length && blocky + i < grid.length){
+                    // random chance to not place sand block, makes it seem more sand like idk
                     if (grid[blocky][blockx + i] == 0 && Math.random() < 0.50){
                         grid[blocky][blockx + i] = 1;
                     }
                     if (grid[blocky][blockx - i] == 0 && Math.random() < 0.50){
                         grid[blocky][blockx - i] = 1;
                     }
-                    // if (grid[blocky + i][blockx] == 0 && Math.random() < 0.50){
-                    //     grid[blocky + i][blockx] = 1;
-                    // }
-                    // if (grid[blocky - i][blockx] == 0 && Math.random() < 0.50){
-                    //     grid[blocky - i][blockx] = 1;
-                    // }
-                    console.log("hello");
                 }
             }
         }
