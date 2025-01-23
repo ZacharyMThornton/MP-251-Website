@@ -111,6 +111,13 @@ nav > a > button:hover {
     opacity: 0.5;
 }
 
+#link {
+    color: blue;
+    position: absolute;
+    bottom: 15px; 
+    left: 15px;
+}
+
 /* animation frames */
 
 @keyframes change{
