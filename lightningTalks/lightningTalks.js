@@ -3,7 +3,7 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-const numberOfBalls = 200; // 100 seems to be the best
+const numberOfBalls = 200; // 200 seems to be the best
 
 let gradient = ctx.createLinearGradient(100,50,canvas.width,canvas.height);
 gradient.addColorStop(0, 'red');
