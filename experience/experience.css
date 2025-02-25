@@ -1,0 +1,140 @@
+* {
+    margin:0;
+    padding:0;
+    z-index: 1;
+    color: white;
+    box-sizing: border-box;
+}
+
+canvas {
+    z-index: 0;
+    position: absolute;
+    background-color: black;
+    top: 0;
+    left: 0;
+}
+
+/* for whatever reason if the body isn't a flexbox it doesn't work right */
+body{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+p {
+    max-width: 500px;
+    display: block;
+}
+
+#middleContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 100vh;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 5px;
+    padding: 10px;
+    height: max-content;
+    width: max-content;
+    align-self: center;
+}
+
+nav > a {
+    width: max-content;
+    height: max-content;
+    margin: 20px;
+}
+
+nav > a > button {
+    color: black;
+    background-color: #ed09e6;
+    border:none;
+    border-radius: 20px;
+    width: 100px;
+    padding: 5px;
+    animation: change-back cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.2s forwards;
+}
+
+nav > a > button:hover {
+    animation: change cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.2s forwards;
+}
+
+#title {
+    position: absolute;
+    top: 150px;
+    border: 1px yellow solid;
+    text-align: center;
+    padding: 10px;
+
+}
+
+#talksContainer{
+    border: 1px white solid;
+    position: absolute;
+    top: 250px;
+    padding: 10px;
+    height: fit-content;
+    max-height: 60vh;
+    overflow: scroll;
+    background-color: rgba(0,0,0,0.4);
+}
+
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+@keyframes change{
+    0%{
+        background-color: #ed09e6;
+    }
+    20%{
+        background: linear-gradient(30deg, blue, #ed09e6);
+    }
+    40%{
+        background: linear-gradient(30deg,green, blue, #ed09e6);
+    }
+    60%{
+        background: linear-gradient(30deg,yellow,green, blue, #ed09e6);
+    }
+    80%{
+        background: linear-gradient(30deg,orange,yellow,green, blue, #ed09e6);
+    }
+    100%{
+        background: linear-gradient(30deg,red, orange,yellow,green, blue );
+    }
+}
+
+@keyframes change-back {
+    0%{
+        background: linear-gradient(30deg,red, orange,yellow,green, blue );
+    }
+    20%{
+        background: linear-gradient(30deg,orange,yellow,green, blue, #ed09e6);
+    }
+    40%{
+        background: linear-gradient(30deg,yellow,green, blue, #ed09e6);
+    }
+    60%{
+        background: linear-gradient(30deg,green, blue, #ed09e6);
+    }
+    80%{
+        background: linear-gradient(30deg, blue, #ed09e6);
+    }
+    100%{
+        background-color: #ed09e6;
+    }
+    
+}
